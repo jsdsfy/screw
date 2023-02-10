@@ -37,13 +37,13 @@
     </licenses>
     <properties>
         <!--java 版本-->
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
         <!--项目编码-->
         <project.encoding>UTF-8</project.encoding>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.source.version>1.8</java.source.version>
-        <java.target.version>1.8</java.target.version>
+        <java.source.version>17</java.source.version>
+        <java.target.version>17</java.target.version>
         <main.user.dir>${user.dir}</main.user.dir>
         <!-- Build args -->
         <argline>-server -Xms256m -Xmx512m -XX:PermSize=64m -XX:MaxPermSize=128m
@@ -55,7 +55,7 @@
         <commons-logging.version>1.2</commons-logging.version>
         <commons-dbcp2.version>2.7.0</commons-dbcp2.version>
         <HikariCP.version>3.4.5</HikariCP.version>
-        <lombok.version>1.18.16</lombok.version>
+        <lombok.version>1.18.26</lombok.version>
         <freemarker.version>2.3.30</freemarker.version>
         <velocity.version>1.7</velocity.version>
         <velocity-tools.version>2.0</velocity-tools.version>
@@ -277,6 +277,7 @@
                 <artifactId>maven-plugin-annotations</artifactId>
                 <version>${maven-plugin-annotations.version}</version>
             </dependency>
+
             <!--junit-->
             <dependency>
                 <groupId>junit</groupId>
@@ -295,6 +296,7 @@
         <module>screw-core</module>
         <module>screw-maven-plugin</module>
         <module>screw-extension</module>
+        <module>web</module>
     </modules>
     <distributionManagement>
         <snapshotRepository>
@@ -337,24 +339,24 @@
                 </executions>
             </plugin>
             <!--javadoc-->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>${maven-javadoc-plugin.version}</version>
-                <configuration>
-                    <charset>UTF-8</charset>
-                    <encoding>UTF-8</encoding>
-                    <docencoding>UTF-8</docencoding>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>attach-javadocs</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-javadoc-plugin</artifactId>-->
+<!--                <version>${maven-javadoc-plugin.version}</version>-->
+<!--                <configuration>-->
+<!--                    <charset>UTF-8</charset>-->
+<!--                    <encoding>UTF-8</encoding>-->
+<!--                    <docencoding>UTF-8</docencoding>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>attach-javadocs</id>-->
+<!--                        <goals>-->
+<!--                            <goal>jar</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
             <!-- versions -->
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
